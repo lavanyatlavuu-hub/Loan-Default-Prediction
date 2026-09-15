@@ -1,83 +1,68 @@
-# Loan-Default-Prediction
-Loan Default Prediction is a machine learning project that predicts whether a loan applicant is likely to repay or default based on income, loan amount, credit score, employment status, existing loans, and debt-to-income ratio. The project uses Logistic Regression with Python and Scikit-learn.
 # Loan Default Prediction
 
-## Overview
-
-This project uses machine learning to predict whether a loan applicant is likely to repay a loan or default. It analyzes applicant details such as income, loan amount, credit score, employment status, existing loans, and debt-to-income ratio.
+## Synopsis
+This project uses machine learning to predict whether a person may fail to repay a loan. It analyzes income, loan amount, credit history, employment status, debt-to-income ratio, and other applicant information.
 
 ## Objectives
+- Explore loan application data.
+- Analyze factors related to loan repayment.
+- Prepare the data for machine learning.
+- Train a classification model.
+- Predict loan default.
+- Check the accuracy of the model.
 
-* Analyze loan application data
-* Handle missing values
-* Prepare data for machine learning
-* Train a classification model
-* Predict loan default
-* Evaluate model performance
-* Identify important factors related to loan default
-
-## Technologies Used
-
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Scikit-learn
-
-## Machine Learning Algorithm
-
-Logistic Regression is used to classify applicants into two categories:
-
-0 = Likely Repayment
-
-1 = Potential Default
+## Tools
+Python, Pandas, Matplotlib, Scikit-learn
 
 ## Dataset Features
+- applicant_id
+- age
+- annual_income
+- loan_amount
+- credit_score
+- employment_status
+- loan_term_months
+- existing_loans
+- debt_to_income_ratio
+- home_ownership
+- loan_default
 
-* Age
-* Annual Income
-* Loan Amount
-* Credit Score
-* Employment Status
-* Loan Term
-* Existing Loans
-* Debt to Income Ratio
-* Home Ownership
+Target:
+- 0 = Likely Repayment
+- 1 = Potential Default
 
-## Methodology
+## Data Preparation
+- Loaded the loan application dataset using Pandas.
+- Checked for missing values.
+- Filled missing numerical values with median values.
+- Filled missing categorical values with the most frequent value.
+- Standardized numerical features.
+- One-hot encoded categorical features.
+- Split the dataset into training and testing sets.
 
-1. Load the loan dataset
-2. Check and handle missing values
-3. Separate features and target
-4. Standardize numerical features
-5. Encode categorical features
-6. Split data into training and testing sets
-7. Train the Logistic Regression model
-8. Generate predictions
-9. Evaluate the model using accuracy, classification report, and confusion matrix
-10. Predict default probability for a new applicant
+## Machine Learning Algorithm
+Logistic Regression is used for binary classification.
 
-## Visualizations
+## Evaluation
+The program calculates:
+- Accuracy
+- Classification report
+- Confusion matrix
+- Default probability for a new applicant
+- Important model factors using logistic-regression coefficients
 
-The project generates visualizations for:
-
-* Credit Score versus Loan Amount
-* Loan Default Rate by Employment Status
+It also generates visualizations for credit score versus loan amount and default rate by employment status.
 
 ## How to Run
-
-Install the required packages:
-
-pip install -r requirements.txt
-
-Run the project:
-
-python loan_default_prediction.py
+1. Install Python.
+2. Open a terminal in this project folder.
+3. Install dependencies:
+   pip install -r requirements.txt
+4. Run:
+   python loan_default_prediction.py
 
 ## Dataset Note
+The included dataset is synthetic and intended for educational/classroom machine-learning practice. It does not contain real applicant information.
 
-The dataset is synthetic and intended for educational and machine learning practice. It does not contain real applicant information.
-
-## Conclusion
-
-This project demonstrates how machine learning can be used to predict loan default risk and identify factors that may influence loan repayment. The model is intended for educational purposes and should not be used as the sole basis for real-world lending decisions.
+## Important Note
+This project is for educational purposes. Model predictions should not be used as the sole basis for real-world lending or credit decisions.
